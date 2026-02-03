@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from guideapp.views import SportAPIView
+from guideapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/sportsmanlist/', SportAPIView.as_view()),
-    path('api/v1/sportsmenlist/<int:pk>', SportAPIView.as_view())
-    
+    path('api/v1/sportsmanlist/', SportAPIList.as_view()),
+    path('api/v1/sportsmanlist/<int:pk>', SportAPIList.as_view())
+
 ]
