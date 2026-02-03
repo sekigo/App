@@ -5,7 +5,7 @@ class Sportsman(models.Model):
     age = models.IntegerField()
     time_created = models.DateTimeField(auto_now_add = True)
     time_update = models.DateTimeField(auto_now = True)
-    is_active = models.BooleanField()
+    is_active = models.BooleanField(default = True)
     cat = models.ForeignKey('Category', on_delete = models.PROTECT, null = True)
 
 

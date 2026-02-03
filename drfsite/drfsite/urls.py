@@ -21,4 +21,6 @@ from guideapp.views import SportAPIView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/sportsmanlist/', SportAPIView.as_view()),
+    path('api/v1/sportsmenlist/<int:pk>', SportAPIView.as_view())
+    
 ]
