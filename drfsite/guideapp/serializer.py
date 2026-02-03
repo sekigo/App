@@ -15,7 +15,7 @@ class SportSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sportsman
         fields = "__all__"
-
+        
 
 
 
