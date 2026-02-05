@@ -20,7 +20,6 @@ from guideapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/sportsmanlist/', SportAPIList.as_view()),
-    path('api/v1/sportsmanlist/<int:pk>', SportAPIList.as_view())
-
+    path('api/v1/sportsmanlist/', snippet_list),
+    path('api/v1/sportsmanlist/<int:pk>', snippet)
 ]
