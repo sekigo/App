@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from guideapp.views import *
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/sportsmanlist/', snippet_list),
-    path('api/v1/sportsmanlist/<int:pk>', snippet)
+    path('api/v1/sportsmanlist/', SnippetList.as_view()),
+    path('api/v1/sportsmanlist/<int:pk>', SnippetDetail.as_view())
 ]
+
+
+urlpatterns = format_suffix_patterns(urlpatterns)
