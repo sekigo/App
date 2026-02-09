@@ -22,7 +22,7 @@ from rest_framework import routers
 
 router = routers.SimpleRouter()
 router.register(r'sportsman', SportViewSet)
-
+print(router.urls)
 
 
 urlpatterns = [
